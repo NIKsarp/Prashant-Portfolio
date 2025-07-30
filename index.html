@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Prashant Rastogi" />
+    <meta name="keywords" content="portfolio" />
+    <meta name="description" content="Welcome to my Portfolio website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="demo">
+    <!-- -------------------------------------------- -->
+    <!-- Menubar Start -->
+    <nav class="menubar">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li>
+          <a href="#">SERVICES</a>
+          <ul>
+            <li>
+              <a href="#">Web Development</a>
+              <ul>
+                <li><a href="#"> HTML </a></li>
+                <li><a href="#"> CSS </a></li>
+                <li><a href="#"> Javascript </a></li>
+                <li><a href="#"> Python </a></li>
+              </ul>
+            </li>
+            <li><a href="#">Android Development</a></li>
+            <li><a href="#">Software Development</a></li>
+          </ul>
+        </li>
+        <li><a href="#">CONTACT US</a></li>
+        <li><a href="#">BLOGS</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menubar End -->
+    <!-- -------------------------------------------- -->
+    <!-- Profile Container Start -->
+    <section class="profile-container base">
+      <div class="left-side">
+        <img src="prashant.jpg" class="myImage" alt="Prashant" />
+        <figcaption class="grey">Profile Picture</figcaption>
+      </div>
+      <div class="right-side">
+        <p>
+          Hello, I am
+          <span class="purple"> Prashant Rastogi </span>
+        </p>
+        &
+        <p>I am <span class="bold">WEB DEVELOPER</span></p>
+      </div>
+    </section>
+    <hr class="divider" />
+    <a name="about"></a>
+
+    <!-- Profile Container End -->
+    <!-- -------------------------------------------- -->
+    <!-- Main Container Start -->
+    <div class="container base">
+      <div class="item">
+        <h2>Profession:</h2>
+        <p>
+          I am professional web developer, I started my coding in class 10th
+          (exam times).
+        </p>
+      </div>
+      <div class="item">
+        <h2>Education:</h2>
+        <p>Currently, I am pursuing BBA</p>
+      </div>
+      <div class="item">
+        <h2>Tech Skills:</h2>
+        <p>HTML5, CSS3, JavaScript, Python, Django, MySQL</p>
+      </div>
+      <div class="item">
+        <h2>Eligibility:</h2>
+        <p>I am Doing Frontend and User Interaction work.</p>
+      </div>
+    </div>
+
+    <!-- Main Container End -->
+    <!-- -------------------------------------------- -->
+
+    <!-- Button Container Start -->
+    <div class="btn-container">
+      <a href="#" type="button" id="theme" class="btn">Light Mode</a>
+      <button
+        type="submit"
+        class="btn"
+        id="normalMode"
+        onclick="document.getElementById('demo').style.backgroundColor='#0a1924'"
+      >
+        Normal Mode
+      </button>
+      <button
+        type="submit"
+        class="btn"
+        id="darkMode"
+        onclick="document.getElementById('demo').style.backgroundColor='black'"
+      >
+        Dark Mode
+      </button>
+    </div>
+
+    <!-- Button Container End -->
+    <!-- -------------------------------------------- -->
+    <!-- Footer Start -->
+    <div class="credits">
+      <ul>
+        <li><a href="#">my home</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">my projects</a></li>
+        <li><a href="#">blogs</a></li>
+        <li><a href="#">follow us</a></li>
+        <li><a href="#">github</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">twitter</a></li>
+        <li><a href="#">youtube</a></li>
+        <li><a href="#">facebook</a></li>
+        <li><a href="#">instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer End -->
+    <!-- -------------------------------------------- -->
+    <!-- Copyright Start -->
+    <footer class="copyright">
+      <p>&copy; Copyright 2023, All rights reserved</p>
+    </footer>
+    <!-- Copyright End -->
+    <!-- -------------------------------------------- -->
+  </body>
+  <script src="index.js"></script>
+</html>

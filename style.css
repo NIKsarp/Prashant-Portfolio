@@ -1,0 +1,335 @@
+:root {
+  --theme: #0a1924;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  color: currentColor;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: #121212;
+  background-color: lime;
+}
+
+body {
+  color: lime;
+  background-color: var(--theme);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to top right, #0a1924, #0d2333);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 3rem;
+  }
+}
+
+.base {
+  margin: 1.125rem;
+  padding: 2rem 0;
+}
+
+/* menubar */
+.menubar {
+  top: 0;
+  z-index: 5;
+  height: 3rem;
+  padding: 1rem;
+  font-size: 0.87em;
+  position: sticky;
+  font-weight: bold;
+  background-color: #121212;
+  border-bottom: 1px solid grey;
+}
+
+.menubar ul {
+  gap: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.menubar ul li {
+  padding: 0.1rem;
+  transition: all 0.3s;
+  color: #fffffe;
+  border-radius: 10px;
+}
+
+.menubar ul li:hover {
+  color: #121212;
+  background-color: blueviolet;
+}
+
+/* Dropdown */
+.menubar ul li ul {
+  top: 3rem;
+  left: 6rem;
+  display: none;
+  padding: 0.7rem;
+  position: absolute;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe40;
+  backdrop-filter: blur(1rem) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menubar ul li:hover > ul,
+ul li ul:hover {
+  opacity: 1;
+  display: block;
+  visibility: visible;
+}
+
+.menubar ul li ul li ul {
+  top: 0;
+  margin-left: 4rem;
+}
+
+/* menubar */
+
+/* profile container */
+.profile-container {
+  gap: 0.75rem;
+  /* display: flex;*/
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.profile-container .left-side {
+  display: grid;
+  /* justify-items: center; */
+}
+
+.profile-container .right-side {
+  font-size: 1.7em;
+}
+
+.right-side:first-child {
+  display: grid;
+}
+
+.profile-container .myImage {
+  width: 100px;
+  height: 200px;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.profile-container .myImage:hover {
+  transform: scale(20px);
+  /* I am working on it. */
+}
+
+/* This is all text css start */
+.line_div {
+  display: flex;
+  position: relative;
+}
+
+/* .line {
+ 	Work in progress
+ 	bottom: 0;
+ 	z-index: -1;
+ 	display: flex;
+ 	position: absolute;
+ 	border-radius: 2rem;
+ 	animation-name: line;
+ 	animation-duration: 3s;
+ 	animation-iteration-count: 1;
+ 	animation-fill-mode: forwards;
+ 	border: 1.5px solid blueviolet;
+ 	}
+  
+ 	@keyframes line {
+   from {
+   width: 0rem;
+}
+   
+   to {
+   width: 7.5rem;
+}
+    */
+/* }
+ */
+.purple {
+  color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  --theme: linear-gradient(to top left, blueviolet, red, blue);
+  background: var(--theme);
+  color: transparent;
+  background-clip: text;
+  background-size: 120%;
+}
+
+.purple::after {
+  content: "";
+  width: 9%;
+  height: 2px;
+  border-radius: 1rem;
+  background: var(--theme);
+  animation: line 2s 1 ease forwards;
+  /* background: linear-gradient(to top left, blueviolet, blue); */
+}
+
+@keyframes line {
+  100% {
+    width: 14.5rem;
+  }
+}
+
+.bold {
+  color: #e8da17;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.grey {
+  color: grey;
+}
+
+/* This is all text css end */
+.divider {
+  border: 0;
+  width: 90%;
+  height: 1px;
+  margin: 1rem;
+  background-color: gray;
+}
+
+/*  profile container */
+
+/*  main container */
+.container {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+  gap: 2rem;
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 20px;
+  /* background-color: #0d2333; */
+  background: linear-gradient(to top left, #0a1924, #0d2333);
+  box-shadow: 0 2px 3px #12121230, inset 1px 2px 3px #fffffe40;
+}
+
+.item:hover {
+  transform: scale(0.95);
+  /* background-color: #112b3d; */
+  background-size: 180%;
+  background: linear-gradient(to top left, #0d2333, #0a1924);
+  box-shadow: 1px 1px 5px #fffffe30, inset 1px 2px 3px #fffffe40;
+}
+
+.item h2 {
+  /* color: green; */
+  color: transparent;
+
+  background: linear-gradient(to top left, lime, green);
+  background-clip: text;
+}
+
+.item:hover h2 {
+  /* color: lime; */
+  /* color: transparent; */
+  /* background: linear-gradient(to top left, green,lime); */
+  /* background-clip: text; */
+  background-position: center center;
+  background-size: 180%;
+}
+
+.item p {
+  color: grey;
+  /* margin-top: 3rem; */
+}
+
+.item:hover p {
+  color: #fffffe;
+}
+
+/* main container */
+
+/*  button container */
+.btn-container {
+  bottom: 8vh;
+  display: flex;
+  position: sticky;
+  background-color: #121212;
+  justify-content: space-evenly;
+}
+
+.btn {
+  color: #fffffe;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid #fffffe;
+  background-color: #121212;
+}
+
+/*  button container */
+
+/*  credits */
+.credits {
+  display: flex;
+  padding: 10px 0;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: #050d12;
+  justify-content: space-evenly;
+  border-top: 2px solid #0d2333;
+}
+
+.credits ul {
+  display: flex;
+  column-gap: 5rem;
+  gap: 1rem 0.5rem;
+  flex-direction: column;
+}
+
+.credits ul li a {
+  padding: 0.5rem;
+  cursor: text;
+  color: #444444;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+
+.credits ul li a:hover {
+  color: #fffffe;
+  border-top: 1px solid #fffffe30;
+  border-left: 1px solid #fffffe30;
+  box-shadow: 1px 1px 3px #fffffe30;
+  background-color: var(--theme);
+}
+
+/*  credits */
+
+/* footer */
+.copyright {
+  bottom: 0;
+  color: #fffffe;
+  padding: 0.75rem;
+  text-align: center;
+  position: sticky;
+  background-color: #121212;
+  border-top: 1px solid grey;
+}
+
+/* footer */
